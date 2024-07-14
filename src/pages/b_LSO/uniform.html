@@ -294,7 +294,7 @@
                                     <option value="male">Не требуется</option>
                                     <option value="female">Требуется</option>
                                   </select>
-                                  <label for="needOrder">Необходимость основного заказа</label>
+                                  <label for="needOrder">Необходимость</label>
                                 </div>
                               </div>
 
@@ -303,7 +303,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="orderStatus" type="text"
                                     placeholder="Статус основного заказа" readonly>
-                                  <label for="orderStatus">Статус основного заказа</label>
+                                  <label for="orderStatus">Статус заказа</label>
                                 </div>
                               </div>
 
@@ -321,7 +321,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="orderAmount" type="number"
                                     placeholder="Сумма к оплате основного заказа" readonly>
-                                  <label for="orderAmount">Сумма к оплате основного заказа</label>
+                                  <label for="orderAmount">Сумма к оплате</label>
                                 </div>
                               </div>
 
@@ -330,7 +330,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="paymentStatus" type="text"
                                     placeholder="Состояние оплаты основного заказа" readonly>
-                                  <label for="paymentStatus">Состояние оплаты основного заказа</label>
+                                  <label for="paymentStatus">Состояние оплаты</label>
                                 </div>
                               </div>
 
@@ -339,8 +339,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="estimatedDeliveryDate" type="date"
                                     placeholder="Предполагаемая дата получения основного заказа" readonly>
-                                  <label for="estimatedDeliveryDate">Предполагаемая дата получения основного
-                                    заказа</label>
+                                  <label for="estimatedDeliveryDate">Дата получения заказа</label>
                                 </div>
                               </div>
                             </form>
@@ -410,7 +409,7 @@
                                     <option value="male">Не требуется</option>
                                     <option value="female">Требуется</option>
                                   </select>
-                                  <label for="needOrder">Необходимость дополнительного заказа</label>
+                                  <label for="needOrder">Необходимость доп. заказа</label>
                                 </div>
                               </div>
 
@@ -420,7 +419,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="orderStatusDop" type="text"
                                     placeholder="Статус основного заказа" readonly>
-                                  <label for="orderStatus">Статус дополнительного заказа</label>
+                                  <label for="orderStatus">Статус доп. заказа</label>
                                 </div>
                               </div>
 
@@ -429,7 +428,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="orderWaveDop" type="text" placeholder="Волна заказа"
                                     readonly>
-                                  <label for="orderWave">Волна дополнительного заказа</label>
+                                  <label for="orderWave">Волна доп. заказа</label>
                                 </div>
                               </div>
 
@@ -438,7 +437,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="orderAmountDop" type="number"
                                     placeholder="Сумма к оплате основного заказа" readonly>
-                                  <label for="orderAmount">Сумма к оплате дополнительного заказа</label>
+                                  <label for="orderAmount">Сумма к оплате доп. заказа</label>
                                 </div>
                               </div>
 
@@ -447,7 +446,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="paymentStatusDop" type="text"
                                     placeholder="Состояние оплаты основного заказа" readonly>
-                                  <label for="paymentStatus">Состояние оплаты дополнительного заказа</label>
+                                  <label for="paymentStatus">Состояние оплаты доп. заказа</label>
                                 </div>
                               </div>
 
@@ -456,8 +455,7 @@
                                 <div class="form-floating">
                                   <input class="form-control" id="estimatedDeliveryDateDop" type="date"
                                     placeholder="Предполагаемая дата получения основного заказа" readonly>
-                                  <label for="estimatedDeliveryDate">Предполагаемая дата получения дополнительного
-                                    заказа</label>
+                                  <label for="estimatedDeliveryDate">Дата получения доп. заказа</label>
                                 </div>
                               </div>
                             </form>
@@ -588,8 +586,6 @@
   <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
   <!-- Kaiadmin JS -->
   <script src="../../../assets/js/kaiadmin.min.js"></script>
-  <!-- Подключение Bootstrap JS и jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script>
     $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
       type: "line",

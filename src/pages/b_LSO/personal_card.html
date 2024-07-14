@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../../../assets/css/plugins.min.css" />
   <link rel="stylesheet" href="../../../assets/css/kaiadmin.min.css" />
+
+  
 </head>
 
 <body>
@@ -813,29 +815,6 @@
   <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
   <!-- Kaiadmin JS -->
   <script src="../../../assets/js/kaiadmin.min.js"></script>
-  <script>
-    function addEducation() {
-      // Клонируем шаблон
-      var template = document.getElementById('educationTemplate');
-      var clone = template.cloneNode(true);
-
-      // Отображаем клон
-      clone.style.display = 'block';
-
-      // Удаляем id, чтобы можно было добавить несколько копий
-      clone.removeAttribute('id');
-
-      // Находим кнопки удаления и добавляем событие
-      var removeBtn = clone.querySelector('.remove-education');
-      removeBtn.addEventListener('click', function () {
-        clone.remove();
-      });
-
-      // Добавляем клон в секцию
-      document.getElementById('educationSection').appendChild(clone);
-    }
-
-  </script>
   <script>
     $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
       type: "line",
