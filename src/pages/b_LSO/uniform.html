@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Форменная одежда - ДОКУМЕНТЫ_СО</title>
+  <meta content="width=device-width, initial-scale=0.9, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="../../../assets/img/doc_ss/logo_doc_ss.png" type="image/x-icon" />
+
+  <!-- Fonts and icons -->
+  <script src="../../../assets/js/plugin/webfont/webfont.min.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["../../../assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/kaiadmin.min.css" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="white">
+      <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="white">
+          <a href="index.html" class="logo">
+            <img src="../../../assets/img/doc_ss/logo_doc_ss_DR.png" alt="navbar brand" class="navbar-brand" height="27" />
+          </a>
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="gg-menu-right"></i>
+            </button>
+            <button class="btn btn-toggle sidenav-toggler">
+              <i class="gg-menu-left"></i>
+            </button>
+          </div>
+          <button class="topbar-toggler more">
+            <i class="gg-more-vertical-alt"></i>
+          </button>
+        </div>
+        <!-- End Logo Header -->
+      </div>
+      <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+          <ul class="nav nav-secondary">
+            <li class="nav-item">
+              <a href="profile.html">
+                <i class="fas fa-user-alt"></i>
+                <p>Профиль</p>
+              </a>
+            <li class="nav-section">
+              <span class="sidebar-mini-icon">
+                <i class="fa fa-ellipsis-h"></i>
+              </span>
+              <h4 class="text-section">Модули</h4>
+            </li>
+            <li class="nav-item">
+              <a href="personal_card.html">
+                <i class="fas fa-address-card"></i>
+                <p>Личная карточка</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="personal_documents.html">
+                <i class="fas fa-file"></i>
+                <p>Личные документы</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="work_season.html">
+                <i class="fas fa-train"></i>
+                <p>Трудовой сезон</p>
+              </a>
+
+            <li class="nav-item active">
+              <a href="uniform.html">
+                <i class="fas fa-male"></i>
+                <p>Форменная одежда</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="agreement.html">
+                <i class="fas fa-marker"></i>
+                <p>Соглашение</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="apps.html">
+                <i class="fas fa-splotch"></i>
+                <p>Apps</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+      <div class="main-header">
+        <div class="main-header-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="white">
+            <a href="index.html" class="logo">
+              <img src="../../../assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+              <select class="form-select" id="exampleFormControlSelect1">
+                <option>Боец</option>
+                <option>Отряд</option>
+                <option>Направление</option>
+                <option>РО</option>
+              </select>
+            </nav>
+
+            <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+              <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false" aria-haspopup="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-search animated fadeIn">
+                  <form class="navbar-left navbar-form nav-search">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search ..." class="form-control" />
+                    </div>
+                  </form>
+                </ul>
+              </li>
+              <li class="nav-item topbar-icon dropdown hidden-caret">
+                <!-- место для уведомлений -->
+              </li>
+              <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                  <div class="avatar-sm">
+                    <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                  </div>
+                  <span class="profile-username">
+                    <span class="fw-bold">Дмитрий Ч.</span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-sm">
+                          <img src="../../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
+                        </div>
+                        <div class="u-text">
+                          <h4>Дмитрий Ч.</h4>
+                          <p class="text-muted">hello@example.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+
+      <div class="container">
+        <div class="page-inner">
+          <div class="row">
+            <div class="col-12 col-md-12">
+              <div class="card mx-2 my-3">
+                <form class="row g-3 mb-3 mx-2 my-1">
+                  <h4>Размеры</h4>
+                  <div class="col-sm-6 col-md-1">
+                    <div class="form-floating"><input class="form-control" id="lastNameSS" type="text"
+                        placeholder="Project title"><label for="lastNameSS">Рост</label></div>
+                  </div>
+                  <div class="col-sm-6 col-md-1">
+                    <div class="form-floating"><input class="form-control" id="firstNameSS" type="text"
+                        placeholder="Project title"><label for="firstNameSS">Плечи</label></div>
+                  </div>
+                  <div class="col-sm-6 col-md-1">
+                    <div class="form-floating"><input class="form-control" id="floatingInputGrid" type="text"
+                        placeholder="Project title"><label for="floatingInputGrid">Грудь</label></div>
+                  </div>
+                  <div class="col-sm-6 col-md-1">
+                    <div class="form-floating"><input class="form-control" id="floatingInputGrid" type="text"
+                        placeholder="Project title"><label for="floatingInputGrid">Талия</label></div>
+                  </div>
+                  <div class="col-sm-6 col-md-1">
+                    <div class="form-floating"><input class="form-control" id="floatingInputGrid" type="text"
+                        placeholder="Project title"><label for="floatingInputGrid">Бедра</label></div>
+                  </div>
+                  <div class="col-sm-6 col-md-5">
+                    <div class="form-group">
+                      <div class="selectgroup w-100">
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="50" class="selectgroup-input" checked="">
+                          <span class="selectgroup-button">S</span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="100" class="selectgroup-input">
+                          <span class="selectgroup-button">M</span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="150" class="selectgroup-input">
+                          <span class="selectgroup-button">L</span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="200" class="selectgroup-input">
+                          <span class="selectgroup-button">XL</span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="250" class="selectgroup-input">
+                          <span class="selectgroup-button">XXL</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="row g-3 mb-6">
+                    <div class="col text-end">
+                      <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </div>
+                  </form>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-12">
+              <div class="card card-profile px-4 mx-2">
+                <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="line-basic-order-tab" data-bs-toggle="pill" href="#line-basic-order"
+                      role="tab" aria-controls="line-basic-order" aria-selected="true">Основной заказ</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-additional-order-tab" data-bs-toggle="pill"
+                      href="#line-additional-order" role="tab" aria-controls="line-additional-order"
+                      aria-selected="false" tabindex="-1">Дополнительный заказ</a>
+                  </li>
+                </ul>
+                <div class="tab-content mt-3 mb-3" id="line-tabContent">
+                  <div class="tab-pane fade show active" id="line-basic-order" role="tabpanel"
+                    aria-labelledby="line-basic-order-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <div class="row">
+
+                          <!-- Форма заказа -->
+                          <div class="col-12 col-md-12">
+                            <form class="row g-3 mb-6">
+
+                              <!-- Необходимость основного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <select class="form-select" id="needOrder">
+                                    <option selected="selected">Не выбрано</option>
+                                    <option value="male">Не требуется</option>
+                                    <option value="female">Требуется</option>
+                                  </select>
+                                  <label for="needOrder">Необходимость основного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Статус основного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderStatus" type="text"
+                                    placeholder="Статус основного заказа" readonly>
+                                  <label for="orderStatus">Статус основного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Волна заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderWave" type="text" placeholder="Волна заказа"
+                                    readonly>
+                                  <label for="orderWave">Волна заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Сумма к оплате основного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderAmount" type="number"
+                                    placeholder="Сумма к оплате основного заказа" readonly>
+                                  <label for="orderAmount">Сумма к оплате основного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Состояние оплаты основного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="paymentStatus" type="text"
+                                    placeholder="Состояние оплаты основного заказа" readonly>
+                                  <label for="paymentStatus">Состояние оплаты основного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Предполагаемая дата получения основного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="estimatedDeliveryDate" type="date"
+                                    placeholder="Предполагаемая дата получения основного заказа" readonly>
+                                  <label for="estimatedDeliveryDate">Предполагаемая дата получения основного
+                                    заказа</label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+
+                          <!-- Карточка заказа -->
+                          <div class="card-header">
+                            <div class="card-title mb-1">Основной заказ</div>
+                            <p>Информация о заказе и его составе.</p>
+                          </div>
+
+                          <!-- Состав основного заказа -->
+                          <div class="card-body pt-0">
+                            <table class="table table-hover mt-1">
+                              <thead>
+                                <tr>
+                                  <th scope="col">№</th>
+                                  <th scope="col">Наименование</th>
+                                  <th scope="col">Стоимость</th>
+                                  <th scope="col">Количество</th>
+                                  <th scope="col">Статус изделия</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Пример изделия</td>
+                                  <td>1000 руб</td>
+                                  <td>1</td>
+                                  <td>В наличии</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Еще одно изделие</td>
+                                  <td>1500 руб</td>
+                                  <td>1</td>
+                                  <td>Отсутствует</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <form class="row g-3 mb-6">
+                              <div class="col text-end">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="line-additional-order" role="tabpanel"
+                    aria-labelledby="line-additional-order-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <div class="row">
+
+                          <!-- Форма заказа -->
+                          <div class="col-12 col-md-12">
+                            <form class="row g-3 mb-6">
+
+                              <!-- Необходимость дополнительного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <select class="form-select" id="needOrderDop">
+                                    <option selected="selected">Не выбрано</option>
+                                    <option value="male">Не требуется</option>
+                                    <option value="female">Требуется</option>
+                                  </select>
+                                  <label for="needOrder">Необходимость дополнительного заказа</label>
+                                </div>
+                              </div>
+
+                          
+                              <!-- Статус дополнительного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderStatusDop" type="text"
+                                    placeholder="Статус основного заказа" readonly>
+                                  <label for="orderStatus">Статус дополнительного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Волна заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderWaveDop" type="text" placeholder="Волна заказа"
+                                    readonly>
+                                  <label for="orderWave">Волна дополнительного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Сумма к оплате дополнительного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="orderAmountDop" type="number"
+                                    placeholder="Сумма к оплате основного заказа" readonly>
+                                  <label for="orderAmount">Сумма к оплате дополнительного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Состояние оплаты дополнительного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="paymentStatusDop" type="text"
+                                    placeholder="Состояние оплаты основного заказа" readonly>
+                                  <label for="paymentStatus">Состояние оплаты дополнительного заказа</label>
+                                </div>
+                              </div>
+
+                              <!-- Предполагаемая дата получения дополнительного заказа -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="estimatedDeliveryDateDop" type="date"
+                                    placeholder="Предполагаемая дата получения основного заказа" readonly>
+                                  <label for="estimatedDeliveryDate">Предполагаемая дата получения дополнительного
+                                    заказа</label>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <!-- Карточка заказа -->
+                          <div class="card-header">
+                            <div class="card-title mb-1">Дополнительный заказ</div>
+                            <p>Информация о заказе и его составе.</p>
+                          </div>
+
+                          <!-- Состав дополнительного заказа -->
+                          <div class="card-body pt-0">
+                            <table class="table table-hover mt-1">
+                              <thead>
+                                <tr>
+                                  <th scope="col">№</th>
+                                  <th scope="col">Наименование</th>
+                                  <th scope="col">Стоимость</th>
+                                  <th scope="col">Количество</th>
+                                  <th scope="col">Статус изделия</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Пример изделия</td>
+                                  <td>1000 руб</td>
+                                  <td>1</td>
+                                  <td>В наличии</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Еще одно изделие</td>
+                                  <td>1500 руб</td>
+                                  <td>1</td>
+                                  <td>Отсутствует</td>
+                                </tr>
+                                <tr>
+                                  <td>Добавить</td>
+                                  <td>
+                                    <div class="form-floating">
+                                      <select class="form-select" id="itemSelect" aria-label="Наименование" onchange="updatePriceAndStatus()">
+                                        <option value="" selected>Выберите наименование</option>
+                                        <option value="photo_3x4">Печать фотографий 3х4</option>
+                                        <option value="male_vest">Жилетка мужская</option>
+                                        <option value="female_vest">Жилетка женская</option>
+                                        <option value="female_skirt">Юбка женская</option>
+                                        <option value="male_pants">Брюки мужские</option>
+                                        <option value="apron">Фартук</option>
+                                        <option value="male_short_sleeve_shirt">Рубашка короткие рукава мужская</option>
+                                        <option value="female_short_sleeve_shirt">Рубашка короткие рукава женская</option>
+                                        <option value="male_long_sleeve_shirt">Рубашка длинные рукава мужская</option>
+                                        <option value="female_long_sleeve_shirt">Рубашка длинные рукава женская</option>
+                                        <option value="plastic_badge">Бейджи пластик</option>
+                                        <option value="plastic_inserts">Вставки пластик</option>
+                                        <option value="male_tie">Галстук мужской</option>
+                                        <option value="female_scarf">Платок женский</option>
+                                        <option value="standard_key">Ключ стандартный (флажок + трехгранка)</option>
+                                        <option value="special_key">Специальный ключ</option>
+                                      </select>
+                                      <label for="itemSelect">Наименование</label>
+                                    </div>
+                                  </td>
+                                  <td><input type="text" class="form-control" id="itemPrice" placeholder="Стоимость" readonly /></td>
+                                  <td><input type="number" class="form-control" placeholder="Количество" /></td>
+                                  <td>
+                                    <select class="form-select" id="itemStatus" aria-label="Статус изделия">
+                                      <option value="ordered" selected>Заказано</option>
+                                      <option value="not_available">Отсутствует</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <form class="row g-3 mb-6">
+                              <div class="col text-end">
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://vk.com/rsopspb">
+                  Группа в ВК
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Помошь </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Лицензия </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with by
+            <a href="http://ds.chasov.tilda.ws/">Chasov D.S.</a>
+          </div>
+          <div>
+            Разработанно для
+            <a target="_blank" href="https://vk.com/spbso">СПб РО МООО "РСО"</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="../../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="../../../assets/js/kaiadmin.min.js"></script>
+  <!-- Подключение Bootstrap JS и jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#177dff",
+      fillColor: "rgba(23, 125, 255, 0.14)",
+    });
+
+    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#f3545d",
+      fillColor: "rgba(243, 84, 93, .14)",
+    });
+
+    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#ffa534",
+      fillColor: "rgba(255, 165, 52, .14)",
+    });
+
+    $("#lineChart4").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart5").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart6").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+  </script>
+      <!-- Скрипт для автоматического назначения стоимости и статуса -->
+      <script>
+        function updatePriceAndStatus() {
+          const itemSelect = document.getElementById('itemSelect');
+          const itemPrice = document.getElementById('itemPrice');
+          const itemStatus = document.getElementById('itemStatus');
+  
+          // Пример цен для каждого наименования
+          const prices = {
+            photo_3x4: '500 руб',
+            male_vest: '2000 руб',
+            female_vest: '1800 руб',
+            female_skirt: '1500 руб',
+            male_pants: '2500 руб',
+            apron: '1200 руб',
+            male_short_sleeve_shirt: '1700 руб',
+            female_short_sleeve_shirt: '1600 руб',
+            male_long_sleeve_shirt: '1800 руб',
+            female_long_sleeve_shirt: '1750 руб',
+            plastic_badge: '100 руб',
+            plastic_inserts: '50 руб',
+            male_tie: '300 руб',
+            female_scarf: '350 руб',
+            standard_key: '200 руб',
+            special_key: '400 руб'
+          };
+  
+          const selectedValue = itemSelect.value;
+          if (selectedValue) {
+            itemPrice.value = prices[selectedValue];
+            itemStatus.value = 'ordered'; // Устанавливаем статус "Заказано"
+          } else {
+            itemPrice.value = ''; // Сбрасываем значение стоимости, если не выбрано ничего
+            itemStatus.value = 'ordered'; // Устанавливаем статус "Заказано"
+          }
+        }
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Личная карточка - ДОКУМЕНТЫ_СО</title>
+  <meta content="width=device-width, initial-scale=0.9, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="../../../assets/img/doc_ss/logo_doc_ss.png" type="image/x-icon" />
+
+  <!-- Fonts and icons -->
+  <script src="../../../assets/js/plugin/webfont/webfont.min.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["../../../assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/kaiadmin.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="white">
+      <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="white">
+          <a href="index.html" class="logo">
+            <img src="../../../assets/img/doc_ss/logo_doc_ss_DR.png" alt="navbar brand" class="navbar-brand" height="27" />
+          </a>
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="gg-menu-right"></i>
+            </button>
+            <button class="btn btn-toggle sidenav-toggler">
+              <i class="gg-menu-left"></i>
+            </button>
+          </div>
+          <button class="topbar-toggler more">
+            <i class="gg-more-vertical-alt"></i>
+          </button>
+        </div>
+        <!-- End Logo Header -->
+      </div>
+      <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+          <ul class="nav nav-secondary">
+            <li class="nav-item">
+              <a href="profile.html">
+                <i class="fas fa-user-alt"></i>
+                <p>Профиль</p>
+              </a>
+            <li class="nav-section">
+              <span class="sidebar-mini-icon">
+                <i class="fa fa-ellipsis-h"></i>
+              </span>
+              <h4 class="text-section">Модули</h4>
+            </li>
+            <li class="nav-item active">
+              <a href="personal_card.html">
+                <i class="fas fa-address-card"></i>
+                <p>Личная карточка</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="personal_documents.html">
+                <i class="fas fa-file"></i>
+                <p>Личные документы</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="work_season.html">
+                <i class="fas fa-train"></i>
+                <p>Трудовой сезон</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="uniform.html">
+                <i class="fas fa-male"></i>
+                <p>Форменная одежда</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="agreement.html">
+                <i class="fas fa-marker"></i>
+                <p>Соглашение</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="apps.html">
+                <i class="fas fa-splotch"></i>
+                <p>Apps</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+      <div class="main-header">
+        <div class="main-header-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="white">
+            <a href="index.html" class="logo">
+              <img src="../../../assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+              <select class="form-select" id="exampleFormControlSelect1">
+                <option>Боец</option>
+                <option>Отряд</option>
+                <option>Направление</option>
+                <option>РО</option>
+              </select>
+            </nav>
+
+            <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+              <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false" aria-haspopup="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-search animated fadeIn">
+                  <form class="navbar-left navbar-form nav-search">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search ..." class="form-control" />
+                    </div>
+                  </form>
+                </ul>
+              </li>
+              <li class="nav-item topbar-icon dropdown hidden-caret">
+                <!-- место для уведомлений -->
+              </li>
+              <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                  <div class="avatar-sm">
+                    <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                  </div>
+                  <span class="profile-username">
+                    <span class="fw-bold">Дмитрий Ч.</span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-sm">
+                          <img src="../../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
+                        </div>
+                        <div class="u-text">
+                          <h4>Дмитрий Ч.</h4>
+                          <p class="text-muted">hello@example.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+
+      <div class="container">
+        <div class="page-inner">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="card card-profile ">
+                <div class="card-header" style="background-image: url('../../../assets/img/blogpost.png')">
+                  <div class="profile-picture">
+                    <div class="avatar avatar-xxl">
+                      <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="user-profile text-center">
+                    <div class="name" id="employeeName">Часов Дмитрий</div>
+                    <div class="job" id="region">Санкт-Петербургское РО</div>
+                    <div class="desc" id="department">СОП "Лотос", Экс-Боец</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <p class="form-control-static">
+                      <a href="mailto:ansolo5@jeemail.com">puk@puk.com</a>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Телефон</label>
+                    <p class="form-control-static">
+                      <a href="tel:+1234567890">+1234567890</a>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Ссылка в ВК</label>
+                    <p class="form-control-static">
+                      <a href="#!">www.vk.com</a>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Место работы</label>
+                    <p class="form-control-static">АО ТК "ГСЭ"</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Табельный номер</label>
+                    <p class="form-control-static">1544</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="card card-profile px-4 mx-2">
+                <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="line-passIS-tab" data-bs-toggle="pill" href="#line-passIS" role="tab"
+                      aria-controls="line-passIS" aria-selected="true">Паспорт, ИНН и СНИЛС</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-lso-status-tab" data-bs-toggle="pill" href="#line-lso-status"
+                      role="tab" aria-controls="line-lso-status" aria-selected="false" tabindex="-1">Статус ЛСО</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-education-tab" data-bs-toggle="pill" href="#line-education" role="tab"
+                      aria-controls="line-education" aria-selected="false" tabindex="-1">Обучение в ВУЗ</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-co-education-tab" data-bs-toggle="pill" href="#line-co-education"
+                      role="tab" aria-controls="line-co-education" aria-selected="false" tabindex="-1">Обучение в СО</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-medical-tab" data-bs-toggle="pill" href="#line-medical" role="tab"
+                      aria-controls="line-medical" aria-selected="false" tabindex="-1">Мед. Комиссия</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-contact-tab" data-bs-toggle="pill" href="#line-contact" role="tab"
+                      aria-controls="line-contact" aria-selected="false" tabindex="-1">Контактные Данные</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content mt-3 mb-3" id="line-tabContent">
+                  <div class="tab-pane fade show active" id="line-passIS" role="tabpanel"
+                    aria-labelledby="line-passIS-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <form class="row g-3 mb-6">
+                          <h4>Паспорт</h4>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating"><input class="form-control" id="lastNameSS" type="text"
+                                placeholder="Project title"><label for="lastNameSS">Фамилия</label></div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating"><input class="form-control" id="firstNameSS" type="text"
+                                placeholder="Project title"><label for="firstNameSS">Имя</label></div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating"><input class="form-control" id="floatingInputGrid" type="text"
+                                placeholder="Project title"><label for="floatingInputGrid">Отчество</label></div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="passportGender">
+                                <option selected="selected">Не выбран</option>
+                                <option value="male">Мужской</option>
+                                <option value="female">Женский</option>
+                              </select>
+                              <label for="passportGender">Пол</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="passportNationality">
+                                <option selected="selected">Не выбрано</option>
+                                <option value="rf">РФ</option>
+                                <option value="rb">РБ</option>
+                                <option value="kz">КЗ</option>
+                              </select>
+                              <label for="passportNationality">Гражданство</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportDob" type="date" placeholder="Дата рождения">
+                              <label for="passportDob">Дата рождения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportPob" type="text" placeholder="Место рождения">
+                              <label for="passportPob">Место рождения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportSerial" type="text" placeholder="Серия паспорта">
+                              <label for="passportSerial">Серия паспорта</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportNumber" type="text" placeholder="Hомер паспорта">
+                              <label for="passportNumber">Hомер паспорта</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportIssueDate" type="date"
+                                placeholder="Дата выдачи паспорта">
+                              <label for="passportIssueDate">Дата выдачи паспорта</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportDivisionCode" type="text"
+                                placeholder="Код подразделения, выдавшего паспорт">
+                              <label for="passportDivisionCode">Код подразделения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-12">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportIssuedBy" type="text"
+                                placeholder="Кем выдан паспорт">
+                              <label for="passportIssuedBy">Кем выдан паспорт</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-12">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportPermAddress" type="text"
+                                placeholder="Адрес постоянной регистрации">
+                              <label for="passportPermAddress">Адрес постоянной регистрации</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-12">
+                            <div class="form-floating">
+                              <input class="form-control" id="passportTempAddress" type="text"
+                                placeholder="Адрес временной регистрации (если есть)">
+                              <label for="passportTempAddress">Адрес временной регистрации (если есть)</label>
+                            </div>
+                          </div>
+
+                          <!-- Блок "ИНН и СНИЛС" -->
+                          <h4>ИНН и СНИЛС</h4>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="inn" type="text"
+                                placeholder="ИНН (Идентификационный номер налогоплательщика)">
+                              <label for="inn">ИНН</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="snils" type="text"
+                                placeholder="СНИЛС (Страховой номер индивидуального лицевого счета)">
+                              <label for="snils">СНИЛС</label>
+                            </div>
+                          </div>
+                          <div class="row m-3 pt-3 ">
+                            <div class="col text-end">
+                              <button type="button" class="btn btn-secondary me-2">Отменить изменения</button>
+                              <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-lso-status" role="tabpanel" aria-labelledby="line-lso-status-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <form class="row g-3 mb-6">
+                          <div class="table-responsive">
+                            <div id="basic-datatables_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <table id="basic-datatables" class="table mt-3" role="grid"
+                                    aria-describedby="basic-datatables_info">
+                                    <thead>
+                                      <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="basic-datatables"
+                                          rowspan="1" colspan="1" aria-sort="ascending"
+                                          aria-label="Regional Office: activate to sort column descending"
+                                          style="width: 168.962px;">Региональное отделение</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="Headquarters: activate to sort column ascending"
+                                          style="width: 127.912px;">Штаб</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="Direction: activate to sort column ascending"
+                                          style="width: 50.875px;">Направление</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="Squad: activate to sort column ascending"
+                                          style="width: 125.312px;">Отряд</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="Status: activate to sort column ascending"
+                                          style="width: 104.5px;">Статус</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="Start Date: activate to sort column ascending"
+                                          style="width: 104.5px;">Начало</th>
+                                        <th class="sorting" tabindex="0" aria-controls="basic-datatables" rowspan="1"
+                                          colspan="1" aria-label="End Date: activate to sort column ascending"
+                                          style="width: 104.5px;">Конец</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr role="row" class="odd">
+                                        <td class="sorting_1">Санкт-Петербургское РО</td>
+                                        <td>БОНЧ</td>
+                                        <td>СОП</td>
+                                        <td>Лотос</td>
+                                        <td>Командир</td>
+                                        <td>01.01.2024</td>
+                                        <td>01.01.2024</td>
+                                      </tr>
+                                      <tr role="row" class="even">
+                                        <td class="sorting_1">Санкт-Петербургское РО</td>
+                                        <td>БОНЧ</td>
+                                        <td>СОП</td>
+                                        <td>Лотос</td>
+                                        <td>Экс-Боец</td>
+                                        <td>01.01.2024</td>
+                                        <td>01.01.2024</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-education" role="tabpanel" aria-labelledby="line-education-tab">
+                    <div class="container">
+                      <div class="row mb-3 g-3">
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="university[]" id="university" type="text"
+                              placeholder="Project title">
+                            <label for="university">Университет</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <select class="form-select" name="educationLevel[]" id="educationLevel">
+                              <option selected="selected">Не выбран</option>
+                              <option value="1">Бакалавриат</option>
+                              <option value="2">Магистратура</option>
+                              <option value="3">СПО</option>
+                              <option value="4">Колледж</option>
+                            </select>
+                            <label for="educationLevel">Уровень образования</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="faculty[]" id="faculty" type="text"
+                              placeholder="Project title">
+                            <label for="faculty">Факультет</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <select class="form-select" name="course[]" id="course">
+                              <option selected="selected">Не выбран</option>
+                              <option value="1">1 курс</option>
+                              <option value="2">2 курс</option>
+                              <option value="3">3 курс</option>
+                              <option value="4">4 курс</option>
+                              <option value="5">5 курс</option>
+                              <option value="6">6 курс</option>
+                              <option value="7">7 курс</option>
+                            </select>
+                            <label for="course">Курс</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="studyGroup[]" id="studyGroup" type="text"
+                              placeholder="Project title">
+                            <label for="studyGroup">Студенческая группа</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <select class="form-select" name="studyForm[]" id="studyForm">
+                              <option selected="selected">Не выбран</option>
+                              <option value="1">Очная</option>
+                              <option value="2">Заочная</option>
+                              <option value="3">Академ</option>
+                            </select>
+                            <label for="studyForm">Форма обучения</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="studyDirection[]" id="studyDirection" type="text"
+                              placeholder="Project title">
+                            <label for="studyDirection">Направление обучения</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="startDate[]" id="startDate" type="date"
+                              placeholder="Project title">
+                            <label for="startDate">Дата начала обучения</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-floating">
+                            <input class="form-control" name="endDate[]" id="endDate" type="date"
+                              placeholder="Project title">
+                            <label for="endDate">Дата окончания обучения</label>
+                          </div>
+                        </div>
+                        <div class="row m-3 pt-3 ">
+                          <div class="col text-end">
+                            <button type="button" class="btn btn-secondary me-2">Отменить изменения</button>
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-co-education" role="tabpanel"
+                    aria-labelledby="line-co-education-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <form class="row g-3 mb-6">
+                          <div class="col-sm-6 col-md-8">
+                            <div class="form-floating">
+                              <input class="form-control" id="trainingInstitution" type="text"
+                                placeholder="Project title" readonly>
+                              <label for="trainingInstitution">Учреждение</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="trainingPosition" type="text"
+                                placeholder="Профессия обучения" readonly>
+                              <label for="trainingPosition">Профессия обучения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="trainingWave" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="trainingWave">Волна обучения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="trainingStatus" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="trainingStatus">Статус обучения</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="trainingYear" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="trainingYear">Год обучения</label>
+                            </div>
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-medical" role="tabpanel" aria-labelledby="line-medical-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <form class="row g-3 mb-6">
+                          <h4>Врачебно-экспертная комиссия</h4>
+                          <div class="col-sm-6 col-md-8">
+                            <div class="form-floating">
+                              <input class="form-control" id="vekMedicalCenter" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="vekMedicalCenter">Медицинский центр</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="vekMedicalStatus" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="vekMedicalStatus">Статус медкомиссии</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="vekTrainingWave" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="vekTrainingWave">Волна медкомиссии</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="vekMedicalYear" type="text" placeholder="Project title"
+                                readonly>
+                              <label for="vekMedicalYear">Год прохождения медкомиссии</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="vekDirectionIssueDate" type="date"
+                                placeholder="Project title" readonly>
+                              <label for="vekDirectionIssueDate">Дата выдачи направления</label>
+                            </div>
+                          </div>
+                          <p></p>
+                        </form>
+                        <form class="row g-3 mb-6">
+                          <h4>Военно-учетный стол</h4>
+                          <div class="col-md-4">
+                            <div class="form-floating">
+                              <select class="form-select" name="vekMedicalCategory[]">
+                                <option selected="selected">Не выбрана</option>
+                                <option value="1">А</option>
+                                <option value="2">Б</option>
+                                <option value="3">В</option>
+                                <option value="4">Г</option>
+                                <option value="4">Д</option>
+                                <option value="4">Девушка</option>
+                              </select>
+                              <label>Категория годности</label>
+                            </div>
+                          </div>
+                          <p></p>
+                        </form>
+                        <form class="row g-3 mb-6">
+                          <h4>Медицинская книжка</h4>
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="medicalBookStatus">
+                                <option selected="selected">Выбрать статус</option>
+                                <option value="1">Не требуется ЛМК</option>
+                                <option value="2">Требуется ЛМК</option>
+                                <option value="3">Продление ЛМК</option>
+                              </select>
+                              <label for="medicalBookStatus">Статус медицинской книжки</label>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="medicalBookIssueDate" type="date"
+                                placeholder="Дата выдачи медицинской книжки">
+                              <label for="medicalBookIssueDate">Дата выдачи</label>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="recordYear" type="date"
+                                placeholder="Год проставления записи">
+                              <label for="recordYear">Год проставления записи</label>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6 col-md-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="medicalBookExpiryDate" type="date"
+                                placeholder="Дата окончания действия медицинской книжки">
+                              <label for="medicalBookExpiryDate">Дата окончания действия</label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="row m-3 pt-3 ">
+                        <div class="col text-end">
+                          <button type="button" class="btn btn-secondary me-2">Отменить изменения</button>
+                          <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-contact" role="tabpanel" aria-labelledby="line-contact-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <h4>Личные данные</h4>
+                        <form class="row g-3 mb-4">
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="phoneNumber" type="phoneNumber"
+                                placeholder="Project title">
+                              <label for="phoneNumber">Номер телефона</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="email" type="email" placeholder="Project title">
+                              <label for="email">Электронная почта</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="vkLink" type="text" placeholder="Project title">
+                              <label for="vkLink">Ссылка на ВКонтакте</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                              <input class="form-control" id="telegramLink" type="text" placeholder="Project title">
+                              <label for="telegramLink">Ссылка на Telegram</label>
+                            </div>
+                          </div>
+                        </form>
+                        <form class="row g-3 mb-6">
+                          <h4>Контактны родственика</h4>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="relativeFullName" type="text" placeholder="Project title">
+                              <label for="relativeFullName">Полное имя</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="relativePhoneNumber" type="text"
+                                placeholder="Project title">
+                              <label for="relativePhoneNumber">Номер телефона</label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="row m-3 pt-3 ">
+                        <div class="col text-end">
+                          <button type="button" class="btn btn-secondary me-2">Отменить изменения</button>
+                          <button type="submit" class="btn btn-primary">Сохранить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://vk.com/rsopspb">
+                  Группа в ВК
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Помошь </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Лицензия </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with by
+            <a href="http://ds.chasov.tilda.ws/">Chasov D.S.</a>
+          </div>
+          <div>
+            Разработанно для
+            <a target="_blank" href="https://vk.com/spbso">СПб РО МООО "РСО"</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="../../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="../../../assets/js/kaiadmin.min.js"></script>
+  <script>
+    function addEducation() {
+      // Клонируем шаблон
+      var template = document.getElementById('educationTemplate');
+      var clone = template.cloneNode(true);
+
+      // Отображаем клон
+      clone.style.display = 'block';
+
+      // Удаляем id, чтобы можно было добавить несколько копий
+      clone.removeAttribute('id');
+
+      // Находим кнопки удаления и добавляем событие
+      var removeBtn = clone.querySelector('.remove-education');
+      removeBtn.addEventListener('click', function () {
+        clone.remove();
+      });
+
+      // Добавляем клон в секцию
+      document.getElementById('educationSection').appendChild(clone);
+    }
+
+  </script>
+  <script>
+    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#177dff",
+      fillColor: "rgba(23, 125, 255, 0.14)",
+    });
+
+    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#f3545d",
+      fillColor: "rgba(243, 84, 93, .14)",
+    });
+
+    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#ffa534",
+      fillColor: "rgba(255, 165, 52, .14)",
+    });
+
+    $("#lineChart4").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart5").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart6").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+  </script>
+</body>
+
+</html>

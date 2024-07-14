@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Профиль - ДОКУМЕНТЫ_СО</title>
+  <meta content="width=device-width, initial-scale=0.9, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="../../../assets/img/doc_ss/logo_doc_ss.png" type="image/x-icon" />
+
+  <!-- Fonts and icons -->
+  <script src="../../../assets/js/plugin/webfont/webfont.min.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["../../../assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/kaiadmin.min.css" />
+
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link rel="stylesheet" href="../../../assets/css/demo.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="white">
+      <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="white">
+          <a href="index.html" class="logo">
+            <img src="../../../assets/img/doc_ss/logo_doc_ss_DR.png" alt="navbar brand" class="navbar-brand" height="27" />
+          </a>
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="gg-menu-right"></i>
+            </button>
+            <button class="btn btn-toggle sidenav-toggler">
+              <i class="gg-menu-left"></i>
+            </button>
+          </div>
+          <button class="topbar-toggler more">
+            <i class="gg-more-vertical-alt"></i>
+          </button>
+        </div>
+        <!-- End Logo Header -->
+      </div>
+      <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+          <ul class="nav nav-secondary">
+            <li class="nav-item active">
+              <a href="profile.html">
+                <i class="fas fa-user-alt"></i>
+                <p>Профиль</p>
+              </a>
+            <li class="nav-section">
+              <span class="sidebar-mini-icon">
+                <i class="fa fa-ellipsis-h"></i>
+              </span>
+              <h4 class="text-section">Модули</h4>
+            </li>
+            <li class="nav-item">
+              <a href="personal_card.html">
+                <i class="fas fa-address-card"></i>
+                <p>Личная карточка</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="personal_documents.html">
+                <i class="fas fa-file"></i>
+                <p>Личные документы</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="work_season.html">
+                <i class="fas fa-train"></i>
+                <p>Трудовой сезон</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="uniform.html">
+                <i class="fas fa-male"></i>
+                <p>Форменная одежда</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="agreement.html">
+                <i class="fas fa-marker"></i>
+                <p>Соглашение</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="apps.html">
+                <i class="fas fa-splotch"></i>
+                <p>Apps</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+      <div class="main-header">
+        <div class="main-header-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="white">
+            <a href="index.html" class="logo">
+              <img src="../../../assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+              <select class="form-select" id="exampleFormControlSelect1">
+                <option>Боец</option>
+                <option>Отряд</option>
+                <option>Направление</option>
+                <option>РО</option>
+              </select>
+            </nav>
+
+            <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+              <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false" aria-haspopup="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-search animated fadeIn">
+                  <form class="navbar-left navbar-form nav-search">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search ..." class="form-control" />
+                    </div>
+                  </form>
+                </ul>
+              </li>
+              <li class="nav-item topbar-icon dropdown hidden-caret">
+                <!-- место для уведомлений -->
+              </li>
+              <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                  <div class="avatar-sm">
+                    <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                  </div>
+                  <span class="profile-username">
+                    <span class="fw-bold">Дмитрий Ч.</span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-sm">
+                          <img src="../../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
+                        </div>
+                        <div class="u-text">
+                          <h4>Дмитрий Ч.</h4>
+                          <p class="text-muted">hello@example.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+
+      <div class="container">
+        <div class="page-inner">
+          <!-- Customized Card -->
+          <div class="row">
+            <div class="col-6 col-md-4">
+              <div class="card card-profile">
+                <div class="card-header" style="background-image: url('../../../assets/img/blogpost.png')">
+                  <div class="profile-picture">
+                    <div class="avatar avatar-xxl">
+                      <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="user-profile text-center">
+                    <div class="name">Часов Дмитрий</div>
+                    <div class="job">Заместитель руководителя</div>
+                    <div class="desc">СОП "Лотос"</div>
+                    <div class="view-profile">
+                      <a href="#" class="btn btn-dark w-100">Открыть личную карточку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row user-stats text-center">
+                    <div class="col">
+                      <div class="number">СОП</div>
+                      <div class="title">Направление</div>
+                    </div>
+                    <div class="col">
+                      <div class="number">8</div>
+                      <div class="title">Сезонов</div>
+                    </div>
+                    <div class="col">
+                      <div class="number">ГСЭ</div>
+                      <div class="title">Место работы</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card card-profile px-4 mx-2">
+                <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="line-status-tab" data-bs-toggle="pill" href="#line-status" role="tab"
+                      aria-controls="pills-home" aria-selected="true">Статус ЛСО</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-documents-tab" data-bs-toggle="pill" href="#line-documents" role="tab"
+                      aria-controls="pills-documents" aria-selected="false" tabindex="-1">Документы</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-education-tab" data-bs-toggle="pill" href="#line-education" role="tab"
+                      aria-controls="pills-education" aria-selected="false" tabindex="-1">Обучение СО</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-employment-tab" data-bs-toggle="pill" href="#line-employment"
+                      role="tab" aria-controls="pills-employment" aria-selected="false"
+                      tabindex="-1">Трудоустройство</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-uniform-tab" data-bs-toggle="pill" href="#line-uniform" role="tab"
+                      aria-controls="pills-uniform" aria-selected="false" tabindex="-1">Форменная одежда</a>
+                  </li>
+                </ul>
+                <div class="tab-content mt-3 mb-3" id="line-tabContent">
+                  <div class="tab-pane fade show active" id="line-status" role="tabpanel"
+                    aria-labelledby="line-status-tab">
+                    <div class="form-group">
+                      <div class="row ">
+                        <div class="col-md-6 ">
+                          <label class="control-label">Региональное отделение</label>
+                          <p class="form-control-static"><h5>Санкт-Петербургское региональное отделение МООО "РСО"</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Город</label>
+                          <p class="form-control-static"><h5>Санкт-Петербург</h5></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="control-label">Направление</label>
+                          <p class="form-control-static"><h5>Студенческие отряды проводников</h5></p>
+                        </div>
+                        <div class="col">
+                          <label class="control-label">Отряд</label>
+                          <p class="form-control-static"><h5>Лотос</h5></p>
+                        </div>
+                        <div class="col">
+                          <label class="control-label">Статус в ЛСО</label>
+                          <p class="form-control-static"><h5>Экс-Боец</h5></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-documents" role="tabpanel" aria-labelledby="line-documents-tab">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Паспорт</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-warning text-white" id="basic-addon3">Прописка</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Ожидает проверки "
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Приписное</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-danger text-white" id="basic-addon3">ИНН</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Документ отсутствует"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-secondary text-white" id="basic-addon3">СНИСЛ</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо (АВТО)"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Заключение ВЭК</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Справка ВУЗ</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Справка РСО</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Военный билет</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Реквизиты</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Согласие ОПД</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Свидетельство
+                              ППВ</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Миграционная
+                              карта</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text bg-success text-white" id="basic-addon3">Временная
+                              регистрация</span>
+                            <input type="text" class="form-control" id="disableinput" placeholder="Все хорошо"
+                              disabled="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-education" role="tabpanel" aria-labelledby="line-education-tab">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Профессия</label>
+                          <p class="form-control-static"><h5>Проводник пассажирского вагона 3-го разряда</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Учреждение</label>
+                          <p class="form-control-static"><h5>ПГУПС</h5></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Волна обучения</label>
+                          <p class="form-control-static"><h5>1 Волна</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Статус обучения</label>
+                          <p class="form-control-static"><h5>Обучение закончено</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Год обучения</label>
+                          <p class="form-control-static"><h5>2017</h5></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-employment" role="tabpanel" aria-labelledby="line-employment-tab">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Место работы</label>
+                          <p class="form-control-static"><h5>Федеральная пассажирская компания</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Подразделение работы</label>
+                          <p class="form-control-static"><h5>ВЧ-8</h5></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Должность</label>
+                          <p class="form-control-static"><h5>ППВ 3-й разряд</h5></p>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="control-label">Дата трудоустройства</label>
+                          <p class="form-control-static"><h5>01.06.2024</h5></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="control-label">Название бригады</label>
+                          <p class="form-control-static"><h5>Котики</h5></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-uniform" role="tabpanel" aria-labelledby="line-uniform-tab">
+                    <div class="card card-profile px-4 mx-2">
+                      <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="line-main_order-tab" data-bs-toggle="pill" href="#line-main_order" role="tab"
+                            aria-controls="pills-main_order" aria-selected="true">Основной заказ</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="line-additional_order-tab" data-bs-toggle="pill" href="#line-additional_order" role="tab"
+                            aria-controls="pills-additional_order" aria-selected="false" tabindex="-1">Дополнительный заказ</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content mt-3 mb-3" id="line-tabContent">
+                        <div class="tab-pane fade show active" id="line-main_order" role="tabpanel"
+                          aria-labelledby="line-main_order-tab">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col">
+                                <label class="control-label">Статус</label>
+                                <p class="form-control-static"><h5>Заказан</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Стоимость</label>
+                                <p class="form-control-static"><h5>6.000 руб.</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Состояние</label>
+                                <p class="form-control-static"><h5>Оплачен</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Дата получения</label>
+                                <p class="form-control-static"><h5>01.01.2024</h5></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="line-additional_order" role="tabpanel" aria-labelledby="line-additional_order-tab">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col">
+                                <label class="control-label">Статус</label>
+                                <p class="form-control-static"><h5>Заказан</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Стоимость</label>
+                                <p class="form-control-static"><h5>6.000 руб.</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Состояние</label>
+                                <p class="form-control-static"><h5>Оплачен</h5></p>
+                              </div>
+                              <div class="col">
+                                <label class="control-label">Дата получения</label>
+                                <p class="form-control-static"><h5>01.01.2024</h5></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://vk.com/rsopspb">
+                  Группа в ВК
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Помошь </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Лицензия </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with by
+            <a href="http://ds.chasov.tilda.ws/">Chasov D.S.</a>
+          </div>
+          <div>
+            Разработанно для
+            <a target="_blank" href="https://vk.com/spbso">СПб РО МООО "РСО"</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="../../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="../../../assets/js/kaiadmin.min.js"></script>
+  <script>
+    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#177dff",
+      fillColor: "rgba(23, 125, 255, 0.14)",
+    });
+
+    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#f3545d",
+      fillColor: "rgba(243, 84, 93, .14)",
+    });
+
+    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#ffa534",
+      fillColor: "rgba(255, 165, 52, .14)",
+    });
+
+    $("#lineChart4").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart5").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart6").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+  </script>
+</body>
+
+</html>

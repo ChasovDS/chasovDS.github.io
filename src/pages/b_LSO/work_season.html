@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Трудовой сезон - ДОКУМЕНТЫ_СО</title>
+  <meta content="width=device-width, initial-scale=0.9, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="../../../assets/img/doc_ss/logo_doc_ss.png" type="image/x-icon" />
+
+  <!-- Fonts and icons -->
+  <script src="../../../assets/js/plugin/webfont/webfont.min.js"></script>
+  <script>
+    WebFont.load({
+      google: { families: ["Public Sans:300,400,500,600,700"] },
+      custom: {
+        families: [
+          "Font Awesome 5 Solid",
+          "Font Awesome 5 Regular",
+          "Font Awesome 5 Brands",
+          "simple-line-icons",
+        ],
+        urls: ["../../../assets/css/fonts.min.css"],
+      },
+      active: function () {
+        sessionStorage.fonts = true;
+      },
+    });
+  </script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/kaiadmin.min.css" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="white">
+      <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="white">
+          <a href="index.html" class="logo">
+            <img src="../../../assets/img/doc_ss/logo_doc_ss_DR.png" alt="navbar brand" class="navbar-brand" height="27" />
+          </a>
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="gg-menu-right"></i>
+            </button>
+            <button class="btn btn-toggle sidenav-toggler">
+              <i class="gg-menu-left"></i>
+            </button>
+          </div>
+          <button class="topbar-toggler more">
+            <i class="gg-more-vertical-alt"></i>
+          </button>
+        </div>
+        <!-- End Logo Header -->
+      </div>
+      <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+          <ul class="nav nav-secondary">
+            <li class="nav-item">
+              <a href="profile.html">
+                <i class="fas fa-user-alt"></i>
+                <p>Профиль</p>
+              </a>
+            <li class="nav-section">
+              <span class="sidebar-mini-icon">
+                <i class="fa fa-ellipsis-h"></i>
+              </span>
+              <h4 class="text-section">Модули</h4>
+            </li>
+            <li class="nav-item">
+              <a href="personal_card.html">
+                <i class="fas fa-address-card"></i>
+                <p>Личная карточка</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="personal_documents.html">
+                <i class="fas fa-file"></i>
+                <p>Личные документы</p>
+              </a>
+
+            <li class="nav-item active">
+              <a href="work_season.html">
+                <i class="fas fa-train"></i>
+                <p>Трудовой сезон</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="uniform.html">
+                <i class="fas fa-male"></i>
+                <p>Форменная одежда</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="agreement.html">
+                <i class="fas fa-marker"></i>
+                <p>Соглашение</p>
+              </a>
+
+            <li class="nav-item">
+              <a href="apps.html">
+                <i class="fas fa-splotch"></i>
+                <p>Apps</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div class="main-panel">
+      <div class="main-header">
+        <div class="main-header-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="white">
+            <a href="index.html" class="logo">
+              <img src="../../../assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+              <select class="form-select" id="exampleFormControlSelect1">
+                <option>Боец</option>
+                <option>Отряд</option>
+                <option>Направление</option>
+                <option>РО</option>
+              </select>
+            </nav>
+
+            <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+              <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false" aria-haspopup="true">
+                  <i class="fa fa-search"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-search animated fadeIn">
+                  <form class="navbar-left navbar-form nav-search">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search ..." class="form-control" />
+                    </div>
+                  </form>
+                </ul>
+              </li>
+              <li class="nav-item topbar-icon dropdown hidden-caret">
+                <!-- место для уведомлений -->
+              </li>
+              <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                  <div class="avatar-sm">
+                    <img src="../../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                  </div>
+                  <span class="profile-username">
+                    <span class="fw-bold">Дмитрий Ч.</span>
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-sm">
+                          <img src="../../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
+                        </div>
+                        <div class="u-text">
+                          <h4>Дмитрий Ч.</h4>
+                          <p class="text-muted">hello@example.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+
+      <div class="container">
+        <div class="page-inner">
+          <div class="row">
+            <div class="col-12 col-md-12">
+              <div class="card card-profile px-4 mx-2">
+                <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="line-employment-tab" data-bs-toggle="pill" href="#line-employment"
+                      role="tab" aria-controls="line-employment" aria-selected="true">Трудоустройство</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-brigades-tab" data-bs-toggle="pill" href="#line-brigades"
+                      role="tab" aria-controls="line-brigades" aria-selected="false" tabindex="-1">Бригады</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="line-trips-tab" data-bs-toggle="pill" href="#line-trips"
+                      role="tab" aria-controls="line-trips" aria-selected="false" tabindex="-1">Рейсы</a>
+                  </li>
+                </ul>
+                <div class="tab-content mt-3 mb-3" id="line-tabContent">
+                  <div class="tab-pane fade show active" id="line-employment" role="tabpanel" aria-labelledby="line-employment-tab">
+                    <div class="row">
+                      <div class="col-12 col-md-12">
+                        <div class="row">
+                          <div class="col-12 col-md-12">
+                            <form class="row g-3 mb-6">
+                              <div class="col-sm-6 col-md-8">
+                                <div class="form-floating">
+                                  <input class="form-control" id="workPlace" type="text" placeholder="Место работы" readonly>
+                                  <label for="workPlace">Место работы</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="workDepartment" type="text" placeholder="Подразделение" readonly>
+                                  <label for="workDepartment">Подразделение</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="workPosition" type="text" placeholder="Должность" readonly>
+                                  <label for="workPosition">Должность</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="employmentDate" type="date" placeholder="Дата трудоустройства" readonly>
+                                  <label for="employmentDate">Фактическая дата трудоустройства</label>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                  <input class="form-control" id="desiredEmploymentDate" type="date" placeholder="Желаемая дата трудоустройства">
+                                  <label for="desiredEmploymentDate">Желаемая дата трудоустройства</label>
+                                </div>
+                              </div>
+                              <p></p>
+                            </form>
+                            <form class="row g-3 mb-6">
+                              <div class="col text-end">
+                                <button type="button" class="btn btn-secondary me-2">Отменить изменения</button>
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="card-title mb-1">Трудоустройство</div>
+                            <p>Список людей трудоустраивающихся 01.01.2025</p>
+                            
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">Ответственный за трудоустройство</span>
+                            <input type="text" class="form-control" id="employment-officer" aria-describedby="basic-addon3">
+                          </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <table class="table table-hover mt-1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">ФИО</th>
+                                        <th scope="col">Отряд</th>
+                                        <th scope="col">Статус ЛСО</th>
+                                        <th scope="col">Место работы</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Ад</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>Ад</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-brigades" role="tabpanel"
+                    aria-labelledby="line-brigades-tab">
+                    <div class="row">
+                    </div>
+                    <!-- Заголовок и описание таблицы -->
+                    <div class="card-header">
+                      <div class="card-title mb-1" id="teamNameDisplay">Список бригады "Название бригады"</div>
+                      <p>Информация о членах бригады</p>
+                    </div>
+                    
+                    <!-- Тело таблицы -->
+                    <div class="card-body pt-0">
+                      <table class="table table-hover mt-1">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">ФИО</th>
+                            <th scope="col">Отряд</th>
+                            <th scope="col">Должность</th>
+                            <th scope="col">Контактный номер</th>
+                            <th scope="col">Ссылка в ВК</th>
+                            <th scope="col">Ссылка в ТГ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Иван Иванов</td>
+                            <td>Отряд 1</td>
+                            <td>Руководитель</td>
+                            <td>+79991234567</td>
+                            <td><a href="https://vk.com/example1">VK</a></td>
+                            <td><a href="https://t.me/example1">TG</a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Петр Петров</td>
+                            <td>Отряд 2</td>
+                            <td>Заместитель</td>
+                            <td>+79991234568</td>
+                            <td><a href="https://vk.com/example2">VK</a></td>
+                            <td><a href="https://t.me/example2">TG</a></td>
+                          </tr>
+                          <!-- Добавить другие строки здесь -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="line-trips" role="tabpanel"
+                  aria-labelledby="line-trips-tab">
+                 <!-- Заголовок и описание таблицы -->
+                 <div class="card-header">
+                     <div class="card-title mb-1" id="tripDetailsDisplay">Зарегистрированные поездки</div>
+                     <p>Подробная информация о состоявшихся поездках</p>
+                 </div>
+                 <!-- Тело таблицы -->
+                 <div class="card-body pt-0">
+                     <table class="table table-hover mt-1">
+                         <thead>
+                             <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Даты поездки</th>
+                                 <th scope="col">Номер поезда</th>
+                                 <th scope="col">Направление</th>
+                                 <th scope="col">ЛНП</th>
+                                 <th scope="col">Номер вагона</th>
+                                 <th scope="col">Пассажиропоток</th>
+                                 <th scope="col">Доход</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>1</td>
+                                 <td>01.10.2024 - 05.10.2024</td>
+                                 <td>123А</td>
+                                 <td>Москва - Санкт-Петербург</td>
+                                 <td>Ебланов К.К</td>
+                                 <td>12</td>
+                                 <td>150</td>
+                                 <td>30000</td>
+                             </tr>
+                             <tr>
+                                 <td>2</td>
+                                 <td>06.10.2024 - 10.10.2024</td>
+                                 <td>456Б</td>
+                                 <td>Санкт-Петербург - Казань</td>
+                                 <td>Букин Е.В.</td>
+                                 <td>8</td>
+                                 <td>200</td>
+                                 <td>45000</td>
+                             </tr>
+                             <!-- Добавить другие строки здесь -->
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+             
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container-fluid d-flex justify-content-between">
+          <nav class="pull-left">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://vk.com/rsopspb">
+                  Группа в ВК
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Помошь </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Лицензия </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            2024, made with by
+            <a href="http://ds.chasov.tilda.ws/">Chasov D.S.</a>
+          </div>
+          <div>
+            Разработанно для
+            <a target="_blank" href="https://vk.com/spbso">СПб РО МООО "РСО"</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery-3.7.1.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <script src="../../../assets/js/core/bootstrap.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="../../../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="../../../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Kaiadmin JS -->
+  <script src="../../../assets/js/kaiadmin.min.js"></script>
+  <!-- Подключение Bootstrap JS и jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#177dff",
+      fillColor: "rgba(23, 125, 255, 0.14)",
+    });
+
+    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#f3545d",
+      fillColor: "rgba(243, 84, 93, .14)",
+    });
+
+    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "#ffa534",
+      fillColor: "rgba(255, 165, 52, .14)",
+    });
+
+    $("#lineChart4").sparkline([102, 109, 120, 99, 110, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart5").sparkline([99, 125, 122, 105, 110, 124, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+
+    $("#lineChart6").sparkline([105, 103, 123, 100, 95, 105, 115], {
+      type: "line",
+      height: "70",
+      width: "100%",
+      lineWidth: "2",
+      lineColor: "rgba(255, 255, 255, .5)",
+      fillColor: "rgba(255, 255, 255, .15)",
+    });
+  </script>
+
+</body>
+
+</html>
