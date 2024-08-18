@@ -148,7 +148,7 @@ function createLuggageCards(data) {
                     <div class="card-body">
                         <h5 class="card-title">${luggage['Номер багажа']}</h5>
                         <p class="card-text">
-                             ${luggage['Станция посадки']}<i class="bi bi-arrow-right"></i>  ${luggage['Станция высадки']}
+                             ${luggage['Станция посадки']} <i class="bi bi-arrow-right"></i>  ${luggage['Станция высадки']}
                         </p>
                         <p class="card-text">${luggage['Вид багажа']}</p>
                         <p class="card-text">
@@ -301,7 +301,7 @@ function createLuggageCards(data) {
                             <strong>Кол-во мест:</strong> ${luggage['Мест']}
                         </div>
                         <div class="col-12">
-                            ${luggage['СТАТУС ОПЛАТЫ']}
+                            <strong>${luggage['СТАТУС ОПЛАТЫ']}</strong>
                         </div>
                     </div>
                     <div class="row mb-2">
