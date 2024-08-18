@@ -253,7 +253,6 @@ function createLuggageCards(data) {
                         <strong>Станция высадки:</strong><br>
                         ${person['Станция высадки']}
                     </div>
-                    <a href="#" class="btn btn-secondary mt-3" onclick="returnToList(event)">Назад к списку</a>
                 </div>
             `;
             container.appendChild(detailsCard);
@@ -316,7 +315,6 @@ function createLuggageCards(data) {
                             <strong>Место:</strong> ${luggage['Место']}
                         </div>
                     </div>
-                    <a href="#" class="btn btn-secondary mt-3" onclick="returnToList(event, 'luggage')">Назад к списку багажа</a>
                 </div>
             `;
             container.appendChild(detailsCard);
