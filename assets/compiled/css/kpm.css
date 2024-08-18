@@ -1,0 +1,47 @@
+.not-found {
+    display: none;
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card-body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.highlighted-text {
+    color: red;
+    /* Цвет текста */
+    font-weight: bold;
+    /* Полужирный шрифт */
+    background-color: yellow;
+    /* Желтый фон */
+    padding: 2px 4px;
+    /* Отступы для элементов */
+    border-radius: 3px;
+    /* Скругление углов */
+}
+
+.list-group {
+
+    --bs-list-group-item-padding-x: 0rem;
+}
