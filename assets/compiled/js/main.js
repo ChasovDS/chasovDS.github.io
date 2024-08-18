@@ -8,7 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(sectionId).style.display = 'block';
         document.getElementById('mainContent').style.display = 'block';
         document.getElementById('home').style.display = 'none';
+    
+        // Показываем поле для поиска только для документов
+        const searchField = document.querySelector('.input-group');
+        if (sectionId === 'documentsSection') {
+            searchField.style.display = 'flex';
+        } else {
+            searchField.style.display = 'none';
+        }
     }
+    
 
     function hideAllSections() {
         document.querySelectorAll('.section').forEach(section => {
@@ -335,13 +344,17 @@ function createLuggageCards(data) {
     // Функция возврата к списку карточек (универсальная)
     window.returnToList = function(event, listType = 'documents') {
         event && event.preventDefault();
+        
+        // Очистка поля поиска
+        const searchInput = document.getElementById('searchInput');
+        searchInput.value = '';
+        
         if (listType === 'documents') {
-            document.getElementById('searchInput').value = '';
             loadDocuments();
         } else if (listType === 'luggage') {
             loadLuggage();
         }
-        
+    
         // Показываем поле для поиска только для документов
         const searchField = document.querySelector('.input-group');
         if (listType === 'documents') {
@@ -349,10 +362,11 @@ function createLuggageCards(data) {
         } else {
             searchField.style.display = 'none';
         }
-
+    
         history.pushState(null, '', `#${listType}`);
         showSection(`${listType}Section`);
     };
+    
 
     // Функция для обработки нажатия на кнопку "Назад" в браузере
     window.addEventListener('popstate', function(event) {
@@ -362,6 +376,9 @@ function createLuggageCards(data) {
                 loadRoute();
             } else if (event.state.section === 'documents') {
                 loadDocuments();
+                const searchInput = document.getElementById('searchInput');
+                searchInput.value = ''; // Очистка поля поиска
+                document.querySelector('.input-group').style.display = '';
             } else if (event.state.section === 'luggage') {
                 loadLuggage();
             }
@@ -372,6 +389,7 @@ function createLuggageCards(data) {
             hideAllSections();
         }
     });
+
 
     // Изначально скрываем все секции
     hideAllSections();
