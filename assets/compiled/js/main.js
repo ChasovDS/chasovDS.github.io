@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <span> ${person['Номер билета']}</span>
                         </p>        
                     </div>
-                    <a href="#" class="btn btn-primary btn-details d-flex align-items-center" style="height:170px;" onclick="showDetails(event, ${JSON.stringify(person).replace(/\"/g, '&quot;')})">
+                    <a href="#" class="btn btn-primary btn-details d-flex align-items-center" style="height:200px;" onclick="showDetails(event, ${JSON.stringify(person).replace(/\"/g, '&quot;')})">
                         <i class="bi bi-info-circle fs-1"></i>
                     </a>
                 </div>
