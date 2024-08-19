@@ -105,8 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         <h5 class="card-title">${person['Пассажир']}</h5>
                         <p class="card-text d-flex align-items-center mb-0">
                             <i class="bi bi-person-video2 fs-4 me-1"></i>
-                            <span> <strong>${person['Документ_кр']}</strong></span>
-                        </p>                         
+                            <span class="me-3"> <strong>${person['Документ_кр']}</strong></span> <span> ${person['Гражданство']}</span>
+                        </p>  
+                        <p class="card-text d-flex align-items-center mb-0">
+                            <i class="bi bi-calendar-heart fs-4 me-1"></i>
+                            <span class="me-5"> <strong>${person['Дата рождения']}</strong></span> <span> ${person['Пол_ск']}</span>
+                        </p>                        
                         <p class="card-text d-flex align-items-center mb-0">
                             <i class="bi bi-train-front fs-4 me-1"></i>
                             
