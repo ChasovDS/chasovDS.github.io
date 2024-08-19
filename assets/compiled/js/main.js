@@ -103,13 +103,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="d-flex flex-row justify-content-between align-items-center">
                     <div class="card-body">
                         <h5 class="card-title">${person['Пассажир']}</h5>
-                        <p class="card-text"><strong>Документ:</strong> ${person['Документ_кр']}</p>
-                        <p class="card-text">
-                            <strong>Вагон:</strong> ${person['Вагон']},
-                            <strong>Место:</strong> ${person['Место']}
+                        <p class="card-text d-flex align-items-center mb-0">
+                            <i class="bi bi-person-video2 fs-4 me-1"></i>
+                            <span> <strong>${person['Документ_кр']}</strong></span>
+                        </p>                         
+                        <p class="card-text d-flex align-items-center mb-0">
+                            <i class="bi bi-train-front fs-4 me-1"></i>
+                            
+                            <span class="me-1"> <strong>${person['Вагон']}</strong></span>
+
+                            <i class="bi bi-person-raised-hand fs-4 me-1"></i>
+                            <span class="me-1"> <strong>${person['Место']}</strong></span>
+
                             ${person['Тип льготы'] ? `<span class="highlighted-text"> ${person['Тип льготы']}</span>` : ''}
                         </p>
-                        <p class="card-text"><strong>Номер билета:</strong> ${person['Номер билета']}</p>
+                        <p class="card-text d-flex align-items-center mb-0">
+                            <i class="bi bi-ticket-perforated fs-4 me-1"></i>
+                            <span> ${person['Номер билета']}</span>
+                        </p>        
                     </div>
                     <a href="#" class="btn btn-primary btn-details d-flex align-items-center" style="height:170px;" onclick="showDetails(event, ${JSON.stringify(person).replace(/\"/g, '&quot;')})">
                         <i class="bi bi-info-circle fs-1"></i>
